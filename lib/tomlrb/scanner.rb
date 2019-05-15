@@ -3,7 +3,7 @@ require 'strscan'
 module Tomlrb
   class Scanner
     COMMENT = /#.*/
-    IDENTIFIER = /[\.A-Za-z0-9_-]+/
+    IDENTIFIER = /[A-Za-z0-9_-]+[\.]?[A-Za-z0-9_-]*/
     SPACE = /[ \t\r\n]/
     STRING_BASIC = /(["])(?:\\?.)*?\1/
     STRING_MULTI = /"{3}([\s\S]*?"{3,4})/m
